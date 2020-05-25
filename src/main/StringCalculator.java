@@ -2,7 +2,7 @@ package main;
 
 public class StringCalculator {
 
-	int Add(String numbers) {
+	public int Add(String numbers) {
 		return -1;
 	}
 	
