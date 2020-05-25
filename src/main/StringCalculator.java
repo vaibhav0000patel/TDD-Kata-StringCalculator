@@ -8,10 +8,12 @@ public class StringCalculator {
 		
 		String delimiter = ",";
 		String[] numbersArray = numbers.split(delimiter);
-		
 		int totalSum = 0;
 		for(String num: numbersArray) {
-			totalSum += Integer.parseInt(num); 
+			String[] separatedBynewLine = num.split("\n");
+			for(String n: separatedBynewLine) {	
+				totalSum += Integer.parseInt(n); 
+			}
 		}
 		
 		return totalSum;
