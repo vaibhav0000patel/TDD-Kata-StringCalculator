@@ -3,6 +3,7 @@ The following is a TDD Kata- an exercise in coding, refactoring and test-first, 
 
 ###String Calculator
 Create a simple String calculator with a method signature:
+
 ———————————————
 int Add(string numbers)
 ———————————————
