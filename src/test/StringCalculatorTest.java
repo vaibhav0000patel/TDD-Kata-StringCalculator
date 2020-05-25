@@ -53,9 +53,13 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
-	public void testAdd6() throws Exception {
+	public void testAdd6() {
 		// Invalid Input
-		assertTrue(cl.Add("1,\n")==-1);
+		try {
+			assertTrue(cl.Add("1,\n")==1);
+		}catch(Exception e) {
+			assertTrue(e.getMessage().equals("Invalid Input"));
+		}
 	}
 	
 	@Test
