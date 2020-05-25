@@ -54,7 +54,7 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void testAdd6() {
-		// Invalid Input
+		// Invalid Input with new lines between numbers
 		try {
 			assertTrue(cl.Add("1,\n")==1);
 		}catch(Exception e) {
@@ -73,6 +73,7 @@ public class StringCalculatorTest {
 		// Negative numbers are not allowed 
 		try {
 			assertTrue(cl.Add("//;\n-1;2")==1);
+			throw new Exception("Failed");
 		}catch(Exception e) {
 			assertTrue(e.getMessage().equals("negatives not allowed : -1"));
 		}
@@ -83,6 +84,7 @@ public class StringCalculatorTest {
 		// Show all negative numbers in the Exception
 		try {
 			assertTrue(cl.Add("//;\n-1;-2;6")==3);
+			throw new Exception("Failed");
 		}catch(Exception e) {
 			assertTrue(e.getMessage().equals("negatives not allowed : -1, -2"));
 		}
