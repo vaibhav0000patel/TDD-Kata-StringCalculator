@@ -68,7 +68,7 @@ public class StringCalculatorTest {
 	public void testAdd8() {
 		// Negative numbers are not allowed 
 		try {
-			assertTrue(cl.Add("-1,2")==1);
+			assertTrue(cl.Add("//;\\\\n-1;2")==1);
 		}catch(Exception e) {
 			assertTrue(e.getMessage().equals("negatives not allowed : -1"));
 		}
