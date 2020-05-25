@@ -75,7 +75,7 @@ public class StringCalculatorTest {
 			assertTrue(cl.Add("//;\n-1;2")==1);
 			throw new Exception("Failed");
 		}catch(Exception e) {
-			assertTrue(e.getMessage().equals("negatives not allowed : -1"));
+			assertTrue(e.getMessage().equals("Negatives not allowed : -1"));
 		}
 	}
 	
@@ -86,7 +86,7 @@ public class StringCalculatorTest {
 			assertTrue(cl.Add("//;\n-1;-2;6")==3);
 			throw new Exception("Failed");
 		}catch(Exception e) {
-			assertTrue(e.getMessage().equals("negatives not allowed : -1, -2"));
+			assertTrue(e.getMessage().equals("Negatives not allowed : -1, -2"));
 		}
 	}
 

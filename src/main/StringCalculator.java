@@ -18,11 +18,18 @@ public class StringCalculator {
 		
 		numbers = numbers.replace("\n", delimiter);
 		String[] numbersArray = numbers.split(delimiter);
-		int totalSum = 0;
+		String negatives = "";
 		
+		int totalSum = 0;
 		for(String num: numbersArray) {
+			num = num.trim();
 			if(num.length()>0){
-				totalSum += Integer.parseInt(num);
+				int n = Integer.parseInt(num);
+				if(n<0) {
+					negatives += ", "+num;
+					throw new Exception("Negatives not allowed : "+num);
+				}
+				totalSum += n;
 			}
 		}
 		
