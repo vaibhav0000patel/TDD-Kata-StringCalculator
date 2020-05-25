@@ -2,20 +2,21 @@
 The following is a TDD Kata- an exercise in coding, refactoring and test-first, that you should apply daily for at least 15 minutes .
 
 ###String Calculator
-
 Create a simple String calculator with a method signature:
 ———————————————
 int Add(string numbers)
 ———————————————
-The method can take up to two numbers, separated by commas, and will return their sum. 
+The method can take up to two numbers, separated by commas, and will return their sum.
 for example “” or “1” or “1,2” as inputs.
 (for an empty string it will return 0) 
-Hints:
+
+####Hints:
 ——————
  - Start with the simplest test case of an empty string and move to one and two numbers
  - Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
  - Remember to refactor after each passing test
 ———————————————————————————————
+
 Allow the Add method to handle an unknown amount of numbers
 ————————————————————————————————
 Allow the Add method to handle new lines between numbers (instead of commas).
