@@ -70,7 +70,7 @@ public class StringCalculatorTest {
 	
 	@Test
 	public void testAdd8() {
-		// Negative numbers are not allowed 
+		// Negative numbers are not allowed
 		try {
 			assertTrue(cl.Add("//;\n-1;2")==1);
 			throw new Exception("Failed");

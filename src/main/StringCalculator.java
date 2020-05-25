@@ -27,10 +27,13 @@ public class StringCalculator {
 				int n = Integer.parseInt(num);
 				if(n<0) {
 					negatives += ", "+num;
-					throw new Exception("Negatives not allowed : "+num);
 				}
 				totalSum += n;
 			}
+		}
+		
+		if(negatives.length()>0) {
+			throw new Exception("Negatives not allowed : "+negatives.substring(2));
 		}
 		
 		return totalSum;
