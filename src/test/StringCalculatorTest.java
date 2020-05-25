@@ -61,14 +61,14 @@ public class StringCalculatorTest {
 	@Test
 	public void testAdd7() throws Exception {
 		// Support different delimiters 
-		assertTrue(cl.Add("//;\\n1;2")==3);
+		assertTrue(cl.Add("//;\n1;2")==3);
 	}
 	
 	@Test
 	public void testAdd8() {
 		// Negative numbers are not allowed 
 		try {
-			assertTrue(cl.Add("//;\\\\n-1;2")==1);
+			assertTrue(cl.Add("//;\n-1;2")==1);
 		}catch(Exception e) {
 			assertTrue(e.getMessage().equals("negatives not allowed : -1"));
 		}
@@ -78,7 +78,7 @@ public class StringCalculatorTest {
 	public void testAdd9() {
 		// Show all negative numbers in the Exception
 		try {
-			assertTrue(cl.Add("-1,-2,6")==3);
+			assertTrue(cl.Add("//;\n-1;-2;6")==3);
 		}catch(Exception e) {
 			assertTrue(e.getMessage().equals("negatives not allowed : -1, -2"));
 		}
@@ -93,19 +93,19 @@ public class StringCalculatorTest {
 	@Test
 	public void testAdd11() throws Exception {
 		// Support Variable length of delimiter 
-		assertTrue(cl.Add("//[***]\\n1***2***3")==6);
+		assertTrue(cl.Add("//[***]\n1***2***3")==6);
 	}
 	
 	@Test
 	public void testAdd12() throws Exception {
 		// Allow  multiple delimiters
-		assertTrue(cl.Add("//[*][%]\\n1*2%3")==6);
+		assertTrue(cl.Add("//[*][%]\n1*2%3")==6);
 	}
 	
 	@Test
 	public void testAdd13() throws Exception {
 		// Allow  multiple delimiters with variable length
-		assertTrue(cl.Add("//[****][%%%]\\\\n1****2%%%3")==6);
+		assertTrue(cl.Add("//[****][%%%]\n1****2%%%3")==6);
 	}
 	
 	
