@@ -28,7 +28,7 @@ public class StringCalculator {
 				if(n<0) {
 					negatives += ", "+num;
 				}
-				totalSum += n;
+				if(n<=1000) totalSum += n;
 			}
 		}
 		

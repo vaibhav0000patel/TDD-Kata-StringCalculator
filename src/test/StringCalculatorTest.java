@@ -23,37 +23,37 @@ public class StringCalculatorTest {
 	}
 
 	@Test
-	public void testAdd1() throws Exception {
+	public void testAdd01() throws Exception {
 		// Empty String
 		assertTrue(cl.Add("")==0);
 	}
   
 	@Test
-	public void testAdd2() throws Exception {
+	public void testAdd02() throws Exception {
 		// Single Number
 		assertTrue(cl.Add("1")==1);
 	}
 	
 	@Test
-	public void testAdd3() throws Exception {
+	public void testAdd03() throws Exception {
 		// Two Numbers
 		assertTrue(cl.Add("1,2")==3);
 	}
 	
 	@Test
-	public void testAdd4() throws Exception {
+	public void testAdd04() throws Exception {
 		// Handle unknown amount of numbers
 		assertTrue(cl.Add("1,2,3,4")==10);
 	}
 	
 	@Test
-	public void testAdd5() throws Exception {
+	public void testAdd05() throws Exception {
 		// Handle new new lines between numbers
 		assertTrue(cl.Add("1\n2,3")==6);
 	}
 	
 	@Test
-	public void testAdd6() {
+	public void testAdd06() {
 		// Invalid Input with new lines between numbers
 		try {
 			assertTrue(cl.Add("1,\n")==1);
@@ -63,13 +63,13 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
-	public void testAdd7() throws Exception {
+	public void testAdd07() throws Exception {
 		// Support different delimiters 
 		assertTrue(cl.Add("//;\n1;2")==3);
 	}
 	
 	@Test
-	public void testAdd8() {
+	public void testAdd08() {
 		// Negative numbers are not allowed
 		try {
 			assertTrue(cl.Add("//;\n-1;2")==1);
@@ -80,7 +80,7 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
-	public void testAdd9() {
+	public void testAdd09() {
 		// Show all negative numbers in the Exception
 		try {
 			assertTrue(cl.Add("//;\n-1;-2;6")==3);
@@ -92,7 +92,7 @@ public class StringCalculatorTest {
 
 	@Test
 	public void testAdd10() throws Exception {
-		// Ignore number greater than 100
+		// Ignore number greater than 1000
 		assertTrue(cl.Add("2,1001")==2);
 	}
 	
